@@ -1,0 +1,15 @@
+name = "gas-price-watchdog"
+main = "index.js"
+compatibility_date = "2026-09-09"
+
+# Automatically triggers the worker every single day at 6:00 AM UTC
+[triggers]
+crons = [ "0 6 * * *" ]
+
+# Binds your KV storage namespace to the script
+[[kv_namespaces]]
+binding = "GAS_STORE"
+id = "d115e1512af947039667d9c4cbd9c738"
+
+# Optional: Add your Discord Webhook URL via Cloudflare secrets environment
+# Run: wrangler secret put DISCORD_WEBHOOK_URL
