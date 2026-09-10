@@ -11,5 +11,10 @@ crons = [ "0 6 * * *" ]
 binding = "GAS_STORE"
 id = "d115e1512af947039667d9c4cbd9c738"
 
+[observability.logs]
+enabled = true
+invocation_logs = true
+persist = true
+
 # Optional: Add your Discord Webhook URL via Cloudflare secrets environment
 # Run: wrangler secret put DISCORD_WEBHOOK_URL
